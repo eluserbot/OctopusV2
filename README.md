@@ -126,4 +126,4 @@ If you donlt like to play in linked channel:
 #### Special Credits
 - [Zaute-Km](https://github.com/Zaute-Km): LushaiMusic Developer
 - [Rojserbest](http://github.com/rojserbest): Callsmusic Developer
-- [YrDaddy](http://github.com/eluserbot): Si Badut:)
+- [YrDaddy](http://github.com/eluserbot): Octopus Developer
