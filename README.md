@@ -23,17 +23,10 @@ Before clicking on deploy to heroku just click on fork and star just below
     <img src="https://img.shields.io/github/forks/eluserbot/OctopusV2?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/LushaiMusic/GroupMusicBot">
-    <img src="https://img.shields.io/github/stars/LushaiMusic/VCsMusicBot?style=social">
+  <a href="https://github.com/eluserbot/OctopusV2">
+    <img src="https://img.shields.io/github/stars/eluseebot/OctopusV2?style=social">
   </a>
 </p>
-
-## How to deploy 
-
-Click the below button to watch the video tutorial on deploying
-
-<a href="https://youtu.be/koAzUgNQaDU"><img src="https://img.shields.io/badge/How%20To%20Deploy-blue.svg?logo=Youtube"></a>
-<a href="https://youtu.be/koAzUgNQaDU"><img src="https://img.shields.io/youtube/views/koAzUgNQaDU?style=social">
 
 ### Deploy To Heroku 📡</h4>
 
@@ -46,13 +39,13 @@ Click the below button to watch the video tutorial on deploying
 ### Deploy to VPS 🏃
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/LushaiMusic/VCsMusicBot
-$ cd VCsMusicBot
+$ git clone https://github.com/eluserbot/OctopusV2
+$ cd OctoMusic
 # Upgrade sources
 # Install All Requirements 
 $ pip3 install -r requirements.txt
 # Fork This Repo and fill local.env and config.py both with your own values.Then Start The Bot
-$ python3 -m VCsMusicBot
+$ python3 -m OctoMusic
 ```
 
 ### Features ✅
@@ -115,7 +108,7 @@ $ python3 -m VCsMusicBot
 If you donlt like to play in linked channel:
  1. Get your channel ID.
  2. Rename your group to: Channel Music: your_channel_id
- 3. Add [@VCsMusicPlayer](https://t.me/VCsMusicPlayer) as Channel admin with full perms
+ 3. Add [@OctopusMusicAssistant](https://t.me/OctopusMusicAssistant) as Channel admin with full perms
  4. add helper to channel
  5. Simply send commands in your group.
 
@@ -133,3 +126,4 @@ If you donlt like to play in linked channel:
 #### Special Credits
 - [Zaute-Km](https://github.com/Zaute-Km): LushaiMusic Developer
 - [Rojserbest](http://github.com/rojserbest): Callsmusic Developer
+- [YrDaddy](http://github.com/eluserbot): Si Badut:)
