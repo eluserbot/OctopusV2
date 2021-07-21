@@ -11,7 +11,7 @@ from OctoMusic.helpers.decorators import errors
 from OctoMusic.helpers.filters import command
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
-from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
+from OctoMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
 from OctoMusic.helpers.filters import other_filters
 from OctoMusic.services.callsmusic import callsmusic
 from OctoMusic.services.queues import queues
