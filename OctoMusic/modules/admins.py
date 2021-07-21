@@ -114,11 +114,11 @@ async def admincache(client, message: Message):
     await message.reply_text("✅ **Done... Bot Refreshed**")
     
     
-Client.on_message(command("deploy,deploys"))
-async def update_admin(client, message: Message):
-    chat_id = get_chat_id(message.chat)
+Client.on_message(command("deploy,deploys") & other_filters)
+@errors
+async def admincache(client, message: Message):
     set(
-        chat_id,
+        message.chat.id,
         [
             member.user
             for member in await message.chat.get_members(filter="administrators")
@@ -138,11 +138,11 @@ async def update_admin(client, message: Message):
     )
     
 
-@Client.on_message(command("staff,owner"))
-async def update_admin(client, message: Message):
-    chat_id = get_chat_id(message.chat)
+@Client.on_message(command("staff") & other_filters)
+@errors
+async def admincache(client, message: Message):
     set(
-        chat_id,
+        message.chat.id,
         [
             member.user
             for member in await message.chat.get_members(filter="administrators")
