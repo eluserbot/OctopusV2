@@ -1,15 +1,15 @@
 import os
 from OctoMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Hello 👋 [{}](tg://user?id={})!**\n\n🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels.\n\n✅ Hits /help for more info."
+      START_MSG = "**Haii 👋 [{}](tg://user?id={})!**\n\n━━━━━━━━━━━━━━━━━━━━━━━━\n🛡 Saya adalah bot canggih yang dibuat untuk memutar musik di Obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapatkan info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n\n🎸 Selamat menikmati.\n🎧 **Gunakan Headphones untuk pengalaman lebih baik.**"
       HELP_MSG = [
         ".",
 f"""
 **Hello, Welcome to {PROJECT_NAME}
 
-⭕ I can play music in your group's voice chat as well as channel voice chats.
+⚘ Octopus Music Bot dapat memutar musik di Obrolan Suara Grup & Saluran Channel Telegram dengan mudah.
 
-⭕ Assistant: @{ASSISTANT_NAME}\n\nClick Next ➡️ for instructions.**
+⚘ Assistant: @{ASSISTANT_NAME}\n\nKlik ➡️Next Untuk Instruksi Selanjutnya.**
 """,
 
 f"""
@@ -100,6 +100,7 @@ f"""
  - /userbotleaveall - remove assistant from all chats
  - /broadcast <reply to message> - globally brodcast replied message to all chats
  - /pmpermit [on/off] - enable/disable pmpermit message
+ - /deploy - Deploy Bot to your own
 **Sudo Users can execute any command in any groups.**
 """
       ]

@@ -42,7 +42,7 @@ async def gstart(_, message: Message):
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "🔎 Search YT", switch_inline_query_current_chat=""
+                        "🔎 Search YT", "https://www.youtube.com"
                     ),
                     InlineKeyboardButton(
                         "Close ❌", callback_data="close"

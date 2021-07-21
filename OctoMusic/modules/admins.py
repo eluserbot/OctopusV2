@@ -1,5 +1,3 @@
-# Jangan Di edit di bagian sini!!
-
 from asyncio import QueueEmpty
 from pyrogram import Client 
 from pyrogram import filters
@@ -19,7 +17,7 @@ from OctoMusic.services.callsmusic import callsmusic
 from OctoMusic.services.queues import queues
 
 
-@Client.on_message(filters.command("adminreset"))
+@Client.on_message(filters.command("reload"))
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
@@ -29,7 +27,7 @@ async def update_admin(client, message: Message):
             for member in await message.chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("❇️ Admin cache refreshed!")
+    await message.reply_text("✅ **Done... Bot Refreshed**")
 
 
 @Client.on_message(command("pause") & other_filters)
@@ -116,11 +114,11 @@ async def admincache(client, message: Message):
     await message.reply_text("✅ **Done... Bot Refreshed**")
     
     
-@Client.on_message(command(["deploy,deploys"]))
-@errors
-async def admincache(client, message: Message):
+Client.on_message(command(["deploy,deploys"]))
+async def update_admin(client, message: Message):
+    chat_id = get_chat_id(message.chat)
     set(
-        message.chat.id,
+        chat_id,
         [
             member.user
             for member in await message.chat.get_members(filter="administrators")
@@ -138,3 +136,16 @@ async def admincache(client, message: Message):
             ]
         ),
     )
+    
+
+@Client.on_message(command(["staff,owner"]))
+async def update_admin(client, message: Message):
+    chat_id = get_chat_id(message.chat)
+    set(
+        chat_id,
+        [
+            member.user
+            for member in await message.chat.get_members(filter="administrators")
+        ],
+    )
+    await message.reply_text("**STAFF BOT**\n\n👑 **Owner**\n  ▸ @zxsky\n\n**Thanks To Admin Group.**")

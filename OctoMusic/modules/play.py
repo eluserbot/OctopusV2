@@ -570,7 +570,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Song not found.Try another song or maybe spell it properly."
+                "Lagu tidak ditemukan. Coba lagu lain atau mungkin ketik judul dengan benar"
             )
             print(str(e))
             return
@@ -607,7 +607,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Processing...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -663,7 +663,7 @@ async def play(_, message: Message):
 
             except Exception as e:
                 await lel.edit(
-                    "Song not found.Try another song or maybe spell it properly."
+                    "Lagu tidak ditemukan. Coba lagu lain atau mungkin ketik judul dengan benar"
                 )
                 print(str(e))
                 return
@@ -821,7 +821,7 @@ async def ytplay(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "Song not found.Try another song or maybe spell it properly."
+            "Lagu tidak ditemukan. Coba lagu lain atau mungkin ketik judul dengan benar"
         )
         print(str(e))
         return
@@ -1191,7 +1191,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
         return
-    await cb.message.edit("Hang On... Player Starting")
+    await cb.message.edit("**Stay Here... Wait a minute**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name

@@ -17,13 +17,13 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Hi there, This is a music assistant service of @OctoMusic.\n\n ❗️ Rules:\n   - No chatting allowed\n   - No spam allowed \n\n 👉 **SEND GROUP INVITE LINK OR USERNAME IF USERBOT CAN'T JOIN YOUR GROUP.**\n\n ⚠️ Disclamer: If you are sending a message here it means admin from @zautesChat will see your message and join chat.\n    - Don't add this user to secret groups.\n   - Don't Share private info here.\n\n**Feel Free to Contact Us @zxsky.",
+                "**Hi Everybody**, This is a music Assistant Service of @OctoMusicBot.\n\n❗️**Rules**:\n  - **No Spam Allowed**\n  - **Spam Block!**\n\n👉 **SEND GROUP INVITE LINK OR USERNAME IF USERBOT CAN'T JOIN YOUR GROUP.**\n👉 **OR TYPE /userbotjoin, AUTOMATIC BOT JOIN TO YOUR GROUP.**\n\nFeel Free to Contact Us @zxsky.",
             )
             return
 
     
 
-@Client.on_message(filters.command(["/pmpermit"]))
+@Client.on_message(filters.command(["pmpermit"]))
 async def bye(client: Client, message: Message):
     if message.from_user.id in SUDO_USERS:
         global PMSET
