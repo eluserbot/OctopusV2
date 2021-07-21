@@ -283,7 +283,7 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "<b>Now Playing</b> in {}".format(cb.message.chat.title)
+        msg = "**Now Playing** in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
         msg += "\n- Req by " + by
         temp.pop(0)
@@ -416,7 +416,7 @@ async def m_cb(b, cb):
                 await callsmusic.set_stream(
                     chet_id, queues.get(chet_id)["file"]
                 )
-                await cb.answer.reply_text("✅ <b>Skipped</b>")
+                await cb.answer.reply_text("✅ **Skipped**")
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
                 await cb.message.reply_text(
                     f"- Skipped track\n- Now Playing **{qeue[0][0]}**"
@@ -441,7 +441,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 <b>Processing</b>")
+    lel = await message.reply("🔄 **Processing...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -459,14 +459,14 @@ async def play(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "**Remember to add helper to your channel**",
                     )
                     pass
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "**Add me as admin of yor group first**",
                     )
                     return
 
@@ -476,7 +476,7 @@ async def play(_, message: Message):
                         message.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "**helper userbot joined your chat**",
                     )
 
                 except UserAlreadyParticipant:
@@ -484,8 +484,8 @@ async def play(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"**🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                        "\n\nOr manually add assistant to your Group and try again.**",
                     )
     try:
         await USER.get_chat(chid)
@@ -496,7 +496,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔎 <b>Finding</b>")
+    await lel.edit("🔎 **Finding**")
     if message.reply_to_message:
         if message.reply_to_message.audio:
             pass
@@ -553,7 +553,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 <b>Processing</b>")
+        await lel.edit("🎵 **Processing...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -622,10 +622,10 @@ async def play(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
 
             while j < 5:
-                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
-                toxxt += f" ╚ <b>Duration</b> - {results[j]['duration']}\n"
-                toxxt += f" ╚ <b>Views</b> - {results[j]['views']}\n"
-                toxxt += f" ╚ <b>Channel</b> - {results[j]['channel']}\n\n"
+                toxxt += f"{emojilist[j]} **[{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})**\n"
+                toxxt += f" ╚ **Duration** - {results[j]['duration']}\n"
+                toxxt += f" ╚ **Views** - {results[j]['views']}\n"
+                toxxt += f" ╚ **Channel** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -706,7 +706,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song <b>queued</b> at position {position}!",
+            caption=f"#⃣ Your requested song **queued** at position {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -728,7 +728,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via YouTube Music".format(
+            caption="▶️ **Playing** here the song requested by {} via YouTube Music".format(
                 message.from_user.mention()
             ),
         )
@@ -741,7 +741,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 <b>Processing</b>")
+    lel = await message.reply("🔄 **Processing**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -759,14 +759,14 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "**Remember to add helper to your channel**",
                     )
                     pass
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "**Add me as admin of yor group first**",
                     )
                     return
 
@@ -776,7 +776,7 @@ async def ytplay(_, message: Message):
                         message.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "**helper userbot joined your chat**",
                     )
 
                 except UserAlreadyParticipant:
@@ -784,8 +784,8 @@ async def ytplay(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"**🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                        "\n\nOr manually add assistant to your Group and try again**",
                     )
     try:
         await USER.get_chat(chid)
@@ -795,7 +795,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 <b>Finding</b>")
+    await lel.edit("🔎 **Finding**")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -804,7 +804,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 <b>Processing</b>")
+    await lel.edit("🎵 **Processing...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -864,7 +864,7 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song <b>queued</b> at position {position}!",
+            caption=f"#⃣ Your requested song **queued** at position {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -886,7 +886,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via YouTube Music".format(
+            caption="▶️ **Playing** here the song requested by {} via YouTube Music".format(
                 message.from_user.mention()
             ),
         )
@@ -898,7 +898,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 <b>Processing</b>")
+    lel = await message_.reply("🔄 **Processing...**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -915,14 +915,14 @@ async def deezer(client: Client, message_: Message):
             if administrator == message_.from_user.id:
                 if message_.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "**Remember to add helper to your channel**",
                     )
                     pass
                 try:
                     invitelink = await client.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "**Add me as admin of yor group first**",
                     )
                     return
 
@@ -932,7 +932,7 @@ async def deezer(client: Client, message_: Message):
                         message_.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "**helper userbot joined your chat**",
                     )
 
                 except UserAlreadyParticipant:
@@ -940,8 +940,8 @@ async def deezer(client: Client, message_: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"**🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                        "\n\nOr manually add assistant to your Group and try again**",
                     )
     try:
         await USER.get_chat(chid)
@@ -1036,7 +1036,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message_.reply("🔄 <b>Processing</b>")
+    lel = await message_.reply("🔄 **Processing**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1053,14 +1053,14 @@ async def jiosaavn(client: Client, message_: Message):
             if administrator == message_.from_user.id:
                 if message_.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "**Remember to add helper to your channel**",
                     )
                     pass
                 try:
                     invitelink = await client.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "**Add me as admin of yor group first**",
                     )
                     return
 
@@ -1070,7 +1070,7 @@ async def jiosaavn(client: Client, message_: Message):
                         message_.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "**helper userbot joined your chat**",
                     )
 
                 except UserAlreadyParticipant:
@@ -1078,8 +1078,8 @@ async def jiosaavn(client: Client, message_: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @VCsMusicPlayer to your Group and try again</b>",
+                        f"**🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                        "\n\nOr manually add @VCsMusicPlayer to your Group and try again**",
                     )
     try:
         await USER.get_chat(chid)
@@ -1255,7 +1255,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption=f"#⃣  Song requested by {r_by.mention} <b>queued</b> at position {position}!",
+            caption=f"#⃣  Song requested by {r_by.mention} **queued** at position {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1277,7 +1277,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ <b>Playing</b> here the song requested by {r_by.mention} via YouTube Music",
+            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via YouTube Music",
         )
         
         os.remove("final.png")
