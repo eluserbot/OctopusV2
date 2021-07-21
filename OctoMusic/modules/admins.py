@@ -8,7 +8,7 @@ from OctoMusic.function.admins import set
 from OctoMusic.helpers.channelmusic import get_chat_id
 from OctoMusic.helpers.decorators import authorized_users_only
 from OctoMusic.helpers.decorators import errors
-from OctoMusic.helpers.filters import command
+from OctoMusic.helpers.filters import command, other_filters
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 from OctoMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
