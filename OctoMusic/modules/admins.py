@@ -1,3 +1,5 @@
+# Jangan Di edit di bagian sini!!
+
 from asyncio import QueueEmpty
 from pyrogram import Client 
 from pyrogram import filters
