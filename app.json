@@ -2,8 +2,8 @@
   "name": "Octopus Music",
   "logo": "https://telegra.ph/file/5a24274c6a6455f9a8d8f.png",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
-  "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/LushaiMusic/VCsMusicBot",
+  "keywords": ["music", "voicechat", "telegram", "VCG"],
+  "repository": "https://github.com/eluserbot/OctopusV2",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -17,7 +17,7 @@
     "BOT_USERNAME": {
       "description": "Your bot's username without @",
       "required": true,
-      "value": "OctoMusicBot
+      "value": "OctoMusicBot"
     },
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
