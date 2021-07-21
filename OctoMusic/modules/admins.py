@@ -9,6 +9,9 @@ from OctoMusic.helpers.channelmusic import get_chat_id
 from OctoMusic.helpers.decorators import authorized_users_only
 from OctoMusic.helpers.decorators import errors
 from OctoMusic.helpers.filters import command
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
+from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
 from OctoMusic.helpers.filters import other_filters
 from OctoMusic.services.callsmusic import callsmusic
 from OctoMusic.services.queues import queues
@@ -109,3 +112,27 @@ async def admincache(client, message: Message):
         ],
     )
     await message.reply_text("✅ **Done... Bot Refreshed**")
+    
+    
+@Client.on_message(command(["deploy,deploys"]))
+@errors
+async def admincache(client, message: Message):
+    set(
+        message.chat.id,
+        [
+            member.user
+            for member in await message.chat.get_members(filter="administrators")
+        ],
+    )
+    await message.reply_text(
+       f"""🔥 **Deploy Your Own Bot Here** 🔥""",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Deploy Here", url=f"https://{SOURCE_CODE}"
+                    )
+                ]
+            ]
+        ),
+    )
