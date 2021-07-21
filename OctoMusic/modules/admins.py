@@ -114,7 +114,7 @@ async def admincache(client, message: Message):
     await message.reply_text("✅ **Done... Bot Refreshed**")
     
     
-Client.on_message(command(["deploy,deploys"]))
+Client.on_message(command("deploy,deploys"))
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
@@ -138,7 +138,7 @@ async def update_admin(client, message: Message):
     )
     
 
-@Client.on_message(command(["staff,owner"]))
+@Client.on_message(command("staff,owner"))
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
