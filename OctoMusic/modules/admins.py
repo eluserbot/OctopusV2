@@ -114,7 +114,7 @@ async def admincache(client, message: Message):
     await message.reply_text("✅ **Done... Bot Refreshed**")
     
     
-Client.on_message(command("deploy,deploys") & other_filters)
+Client.on_message(command("deploy") & other_filters)
 @errors
 async def admincache(client, message: Message):
     set(
