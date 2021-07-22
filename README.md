@@ -124,6 +124,10 @@ If you donlt like to play in linked channel:
 
 ### Credits
 #### Special Credits
-- [Zaute-Km](https://github.com/Zaute-Km): LushaiMusic Developer
+<p align="center">
+  <a href="https://t.me/zxsky">
+     <img height="20px" src="https://img.shields.io/badge/YrDaddy-blue?style=for-the-badge&logo=telegram">
+  </a>
+</p>
 - [Rojserbest](http://github.com/rojserbest): Callsmusic Developer
 - [YrDaddy](http://github.com/eluserbot): Octopus Developer
