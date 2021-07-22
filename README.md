@@ -126,8 +126,11 @@ If you donlt like to play in linked channel:
 #### Special Credits
 <p align="center">
   <a href="https://t.me/zxsky">
-     <img height="20px" src="https://img.shields.io/badge/YrDaddy-blue?style=for-the-badge&logo=telegram">
+     <img height="30px" src="https://img.shields.io/badge/YrDaddy-blue?style=for-the-badge&logo=telegram">
   </a>
 </p>
-- [Rojserbest](http://github.com/rojserbest): Callsmusic Developer
-- [YrDaddy](http://github.com/eluserbot): Octopus Developer
+<p align="center">
+  <a href="http://github.com/rojserbest">
+     <img height="30px" src="https://img.shields.io/badge/Rojserbest-black?style=for-the-badge&logo=github">
+  </a>
+</p>
