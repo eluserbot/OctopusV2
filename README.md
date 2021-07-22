@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://t.me/OctoMusicBot">
-     <img height="30px" src="https://img.shields.io/badge/Telegram%20Bot%20Music-blue?style=for-the-badge&logo=github">
+     <img height="30px" src="https://img.shields.io/badge/Telegram%20Bot%20Music-blue?style=for-the-badge&logo=telegram">
   </a>
 </p>
 
