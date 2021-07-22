@@ -126,7 +126,7 @@ If you donlt like to play in linked channel:
 #### Special Credits
 <p align="center">
   <a href="https://t.me/zxsky">
-     <img height="30px" src="https://img.shields.io/badge/YrDaddy-blue?style=for-the-badge&logo=telegram">
+     <img height="30px" src="https://img.shields.io/badge/YrDaddy-black?style=for-the-badge&logo=github">
   </a>
 </p>
 <p align="center">
