@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/eluserbot/OctopusV2">
-     <img height="30px" src="https://img.shields.io/badge/Group%20Music%20Bot-red?style=for-the-badge&logo=github">
+     <img height="30px" src="https://img.shields.io/badge/Group%20El%20Bot-red?style=for-the-badge&logo=github">
   </a>
 </p>
 
