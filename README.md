@@ -3,8 +3,8 @@
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 
 <p align="center">
-  <a href="https://github.com/eluserbot/OctopusV2">
-     <img height="30px" src="https://img.shields.io/badge/Group%20El%20Bot-red?style=for-the-badge&logo=github">
+  <a href="https://t.me/OctoMusicBot">
+     <img height="30px" src="https://img.shields.io/badge/Telegram%20Bot%20Music-blue?style=for-the-badge&logo=github">
   </a>
 </p>
 
