@@ -1,4 +1,4 @@
-<h1 align="centre">Octopus Music Project v2.0</h1>
+<h1 align="centre">🐙 Octopus Music Project v2.0</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 
